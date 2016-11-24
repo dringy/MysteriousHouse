@@ -1,0 +1,79 @@
+{
+	"intents": [
+	{
+		"intent": "AMAZON.HelpIntent"
+	},
+	{
+		"intent": "AMAZON.RepeatIntent"
+	},
+	{
+		"intent": "AMAZON.NoIntent"
+	},
+	{
+		"intent": "AMAZON.StartOverIntent"
+	},
+	{
+		"intent": "AMAZON.StopIntent"
+	},
+	{
+		"intent": "AMAZON.CancelIntent"
+	},
+	{
+		"intent": "AMAZON.YesIntent"
+	},
+	{
+		"intent": "PlayIntent"
+	},
+	{
+		"intent": "ForwardIntent"
+	},
+	{
+		"intent": "LeftIntent"
+	},
+	{
+		"intent": "BackwardIntent"
+	},
+	{
+		"intent": "FirstFloorBackwardIntent"
+	},
+	{
+		"intent": "RightIntent"
+	},
+	{
+		"intent": "ContinueIntent"
+	},
+	{
+		"intent": "ContinueLeftIntent"
+	},
+	{
+		"intent": "ContinueRightIntent"
+	},
+	{
+		"intent": "TalkIntent"
+	},
+	{
+		"intent": "TalkToLarryIntent"
+	},
+	{
+		"intent": "TalkToBarryIntent"
+	},
+	{
+		"intent": "BarrySaidYesIntent"
+	},
+	{
+		"intent": "BarrySaidNoIntent"
+	},
+	{
+		"intent": "CakeIntent"
+	},
+	{
+		"intent": "DoughnutIntent"
+	},
+	{
+		"intent": "CheckpointOneIntent"
+	},
+	{
+		"intent": "CheckpointTwoIntent"
+	}
+	]
+}

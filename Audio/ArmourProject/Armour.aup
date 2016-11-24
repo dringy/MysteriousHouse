@@ -1,0 +1,157 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="Armour_data" version="1.3.0" audacityversion="2.1.2" sel0="2.4367816181" sel1="3.2893463211" vpos="0" h="0.0000000000" zoom="165.3833421610" rate="48000.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags/>
+	<wavetrack name="Metal_sounds" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="25599">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000185.au" len="25599" min="-0.534368" max="0.458322" rms="0.042499"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="1.74140143">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="25866">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000311.au" len="25866" min="-0.646709" max="0.760375" rms="0.050278"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="2.49117914">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="22932">
+				<waveblock start="0">
+					<simpleblockfile filename="e000020f.au" len="22932" min="-0.307883" max="0.328519" rms="0.019724"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="0.76792404">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="30665">
+				<waveblock start="0">
+					<simpleblockfile filename="e000085e.au" len="30665" min="-0.729229" max="0.728507" rms="0.055891"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Metal_sounds" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="25599">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000bd1.au" len="25599" min="-0.534236" max="0.473698" rms="0.04257"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="1.74140143">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="25866">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000174.au" len="25866" min="-0.647007" max="0.760575" rms="0.049996"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="2.49117914">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="22932">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000089.au" len="22932" min="-0.307527" max="0.32856" rms="0.020012"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="0.76792404">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="30665">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000d01.au" len="30665" min="-0.74069" max="0.722726" rms="0.058245"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Metal_sounds" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.40512472">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="22932">
+				<waveblock start="0">
+					<simpleblockfile filename="e000020f.au" len="22932" min="-0.307883" max="0.328519" rms="0.019724"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="1.22745294">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="34398">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000bd4.au" len="1333" min="-0.005337" max="0.003893" rms="0.00025"/>
+				</waveblock>
+				<waveblock start="1333">
+					<simpleblockfile filename="e0000b90.au" len="33065" min="-0.751138" max="0.818659" rms="0.07019"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="2.00745294">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="24532">
+				<waveblock start="0">
+					<simpleblockfile filename="e00005ae.au" len="24532" min="-0.743513" max="0.873456" rms="0.062134"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Metal_sounds" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.40512472">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="22932">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000089.au" len="22932" min="-0.307527" max="0.32856" rms="0.020012"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="1.22745294">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="34398">
+				<waveblock start="0">
+					<simpleblockfile filename="e00006a8.au" len="1333" min="-0.004501" max="0.004266" rms="0.000226"/>
+				</waveblock>
+				<waveblock start="1333">
+					<simpleblockfile filename="e0000284.au" len="33065" min="-0.750401" max="0.819447" rms="0.074541"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="2.00745294">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="24532">
+				<waveblock start="0">
+					<simpleblockfile filename="e00003d6.au" len="24532" min="-0.749494" max="0.88213" rms="0.062296"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Metal_sounds" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.18140590">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="124793">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000a6f.au" len="91728" min="-0.839862" max="0.888284" rms="0.06225"/>
+				</waveblock>
+				<waveblock start="91728">
+					<simpleblockfile filename="e0000340.au" len="33065" min="-0.729229" max="0.728507" rms="0.055913"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Metal_sounds" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.18140590">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="124793">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000628.au" len="91728" min="-0.838292" max="0.891925" rms="0.063102"/>
+				</waveblock>
+				<waveblock start="91728">
+					<simpleblockfile filename="e0000459.au" len="33065" min="-0.74069" max="0.722726" rms="0.058271"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
