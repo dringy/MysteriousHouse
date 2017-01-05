@@ -231,6 +231,7 @@ def hatch_sound():
 
 def jam_sound():
     return "https://www.benjamindring.co.uk/Resources/MysteriousHouse/Jam.mp3"
+
 # --------------- Responses
 
 def get_start_response():
@@ -826,7 +827,7 @@ def on_intent_floor1(intent_name, session):
 
     asking_larry = get_larry_asking(session)
     if asking_larry == -1:
-        return  get_error_response("Twelve")
+        return get_error_response("Twelve")
 
     # Intent Processing
 
@@ -982,6 +983,10 @@ def on_intent_floor1(intent_name, session):
                 construct_floor1_attributes(x, visited_barry, visited_larry, spoken_to_barry,
                                             spoken_to_larry, asking_larry))
 
+    return get_misunderstood_response(
+        construct_floor1_attributes(x, visited_barry, visited_larry, spoken_to_barry,
+                                    spoken_to_larry, asking_larry))
+
 
 def on_intent_floor2(intent_name, session):
     # Get values and validate
@@ -1096,6 +1101,8 @@ def on_intent_floor2(intent_name, session):
                 "You can't continue forward here.",
                 movement_options[1]
             )
+    return get_misunderstood_response(
+        construct_floor2_attributes(x, y, osstate, mob_x, mob_y))
 
 
 def on_intent_floor3(intent_name, session):
@@ -1155,6 +1162,7 @@ def on_intent_floor3(intent_name, session):
             "I'm sorry I didn't understand that, do you want the cake or the doughnuts?",
             "Which do you choose? The cake or the doughnuts?"
         )
+    return get_misunderstood_response(get_starting_floor3_attributes())
 
 
 def on_session_ended(session_ended_request, session):
