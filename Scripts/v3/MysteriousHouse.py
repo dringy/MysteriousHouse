@@ -437,7 +437,7 @@ def get_error_response(error_code):
 # --------------- Floor 1
 
 
-def get_floor1_situation(x, visited_larry, visited_barry, session_attributes, play_door, help_request = False):
+def get_floor1_situation(x, visited_larry, visited_barry, session_attributes, play_door, warp_text = "", help_request = False):
     if x == 0:
 
         help_text = ""
@@ -451,7 +451,7 @@ def get_floor1_situation(x, visited_larry, visited_barry, session_attributes, pl
                     "Barry the Ghost.",
                     "",
                     door_sound(),
-                    "Barry is still very interested in the static picture, " + help_text +
+                    warp_text + "Barry is still very interested in the static picture, " + help_text +
                     "Would you like to talk to Barry or head back?",
                     "Talk to Barry or go back?"
                 )
@@ -459,7 +459,7 @@ def get_floor1_situation(x, visited_larry, visited_barry, session_attributes, pl
                 return get_response(
                     session_attributes,
                     "Barry the Ghost.",
-                    "Barry is still very interested in the static picture, " + help_text +
+                    warp_text + "Barry is still very interested in the static picture, " + help_text +
                     "Would you like to talk to Barry or head back?",
                     "Talk to Barry or go back?"
                 )
@@ -470,7 +470,7 @@ def get_floor1_situation(x, visited_larry, visited_barry, session_attributes, pl
                     "Barry the Ghost.",
                     "",
                     door_sound(),
-                    "A relaxed ghost is watching a static television screen. The name plate on his desk says Barry, " +
+                    warp_text + "A relaxed ghost is watching a static television screen. The name plate on his desk says Barry, " +
                     help_text  + "Would you like to talk to Barry or head back?",
                     "Talk to Barry or go back?"
                 )
@@ -478,7 +478,7 @@ def get_floor1_situation(x, visited_larry, visited_barry, session_attributes, pl
                 return get_response(
                     session_attributes,
                     "Barry the Ghost.",
-                    "A relaxed ghost is watching a static television screen. The name plate on his desk says Barry, " +
+                    warp_text + "A relaxed ghost is watching a static television screen. The name plate on his desk says Barry, " +
                     help_text + "Would you like to talk to Barry or head back?",
                     "Talk to Barry or go back?"
                 )
@@ -489,10 +489,11 @@ def get_floor1_situation(x, visited_larry, visited_barry, session_attributes, pl
             help_text = "Say: Left, to go through the left door. Say: Right, to go through the right door. "
 
         if play_door:
+            print(warp_text)
             return get_audio_response(
                 session_attributes,
                 "Left or Right Door?",
-                "",
+                warp_text,
                  door_sound(),
                 "You return back to the entrance hall. " + help_text +
                 "Would you like to go through the left or right door?",
@@ -502,7 +503,7 @@ def get_floor1_situation(x, visited_larry, visited_barry, session_attributes, pl
             return get_response(
                 session_attributes,
                 "Left or Right Door?",
-                "You have just arrived at the mysterious house, " + help_text +
+                warp_text + "You have just arrived at the mysterious house, " + help_text +
                 "would you like to go through the left or right door?",
                 "Left or Right door?"
             )
@@ -510,7 +511,7 @@ def get_floor1_situation(x, visited_larry, visited_barry, session_attributes, pl
             return get_response(
                 session_attributes,
                 "Left or Right Door?",
-                "You returned back to the entrance hall, " + help_text +
+                warp_text + "You returned back to the entrance hall, " + help_text +
                 "would you like to go through the left or right door?",
                 "Left or Right door?"
             )
@@ -525,7 +526,7 @@ def get_floor1_situation(x, visited_larry, visited_barry, session_attributes, pl
                 return get_audio_response(
                     session_attributes,
                     "Larry the Ghost.",
-                    "",
+                    warp_text,
                     door_sound(),
                     "Larry remains guarding the ladder, he seems a bit bored. " + help_text +
                     "Would you like to talk to Larry or head back?",
@@ -535,7 +536,7 @@ def get_floor1_situation(x, visited_larry, visited_barry, session_attributes, pl
                 return get_response(
                     session_attributes,
                     "Larry the Ghost.",
-                    "Larry remains guarding the ladder, he seems a bit bored. " + help_text +
+                    warp_text + "Larry remains guarding the ladder, he seems a bit bored. " + help_text +
                     "Would you like to talk to Larry or head back?",
                     "Talk to Larry or go back?"
                 )
@@ -544,7 +545,7 @@ def get_floor1_situation(x, visited_larry, visited_barry, session_attributes, pl
                 return get_audio_response(
                     session_attributes,
                     "Larry the Ghost.",
-                    "",
+                    warp_text,
                     door_sound(),
                     "A ladder leading underground is guarded by a tired-looking ghost. His name tag says Larry. " +
                     help_text +
@@ -555,6 +556,7 @@ def get_floor1_situation(x, visited_larry, visited_barry, session_attributes, pl
                 return get_response(
                     session_attributes,
                     "Larry the Ghost.",
+                    warp_text +
                     "A ladder leading underground is guarded by a tired-looking ghost. His name tag says Larry. " +
                     help_text +
                     "There is some sort of white powder on the floor. Would you like to talk to Larry or head back?",
@@ -918,6 +920,7 @@ def on_intent(intent_request, session):
     intent = intent_request['intent']
     intent_name = intent_request['intent']['name']
     userId = session['user']['userId']
+    warp_response = ""
 
     # Deal with stops and start overs
     if intent_name == "AMAZON.StopIntent" or intent_name == "AMAZON.CancelIntent":
@@ -925,64 +928,74 @@ def on_intent(intent_request, session):
     elif intent_name == "AMAZON.StartOverIntent":
         return get_start_response()
     elif intent_name == "WarpIntent":
-        if (LoadCanWarp(userId)):
-            if intent.get('slots', {}) and "floor" in intent.get('slots', {}) and "value" in intent['slots']['floor']:
-                floor_number = intent['slots']['floor']['value']
-                if (floor_number == '1'):
-                    return  get_start_response()
-                elif (floor_number == '2'):
-                    return get_doubleaudio_response(
-                        get_starting_floor2_attributes(),
-                        "Warp to floor 2.",
-                        "You warp to a dimly lit corridor at the base of a ladder, ",
-                        jam_sound(),
-                        "there is something red and sticky on the floor. You can hear the clattering of metal. ",
-                        armour_sound(),
-                        "something is moving down here. "
-                        "You can either go forward down one corridor or move right down another. What would you like to do?",
-                        "Go straight ahead or right?"
-                    )
-                elif (floor_number == '3'):
-                    return get_audio_response(
-                        get_starting_floor3_attributes(),
-                        "What do you choose?",
-                        "You warp to floor 3 and end up in a single room. "
-                        "You hear a noise. ",
-                        hatch_sound(),
-                        "The hole you just climbed down has been sealed from the other side. "
-                        "Ahead of you are two treats on small wooden tables, one has a plate of sugared doughnuts, "
-                        "the other has a full victoria sponge cake. Which do you choose?",
-                        "Which do you choose? The cake or the doughnuts?"
-                    )
-                elif session.get('attributes', {}) and "Floor" in session.get('attributes', {}):
-                    attr = session['attributes']
-                    return get_response(attr, 'Cannot Warp', 'You cannot warp to that floor.')
-                else:
-                    return get_start_response()
-            elif session.get('attributes', {}) and "Floor" in session.get('attributes', {}):
-                attr = session['attributes']
-                return get_response(attr, 'Cannot Warp', 'You cannot warp to that floor.')
-        else:
-            if session.get('attributes', {}) and "Floor" in session.get('attributes', {}):
-                attr = session['attributes']
-                return get_response(attr, 'Cannot Warp', 'You cannot warp yet.')
-            else:
-                return get_start_response()
+        [warp_error, warp_response] = on_intent_warp(intent, session, userId)
+        if (warp_error == False):
+            return warp_response
 
     # Get Floor
     floor = get_floor_number(session)
     # Select correct event based on floor
     if floor == 1:
-        return on_intent_floor1(intent_name, session, userId)
+        return on_intent_floor1(intent_name, session, userId, warp_response)
     elif floor == 2:
-        return on_intent_floor2(intent_name, session, userId)
+        return on_intent_floor2(intent_name, session, userId, warp_response)
     elif floor == 3:
-        return on_intent_floor3(intent_name, session, userId)
+        return on_intent_floor3(intent_name, session, userId, warp_response)
     else:
         return initial_load_response(userId)
 
+def on_intent_warp(intent, session, userId):
+    isError = False
+    response = ""
 
-def on_intent_floor1(intent_name, session, userId):
+    if (LoadCanWarp(userId)):
+        if intent.get('slots', {}) and "floor" in intent.get('slots', {}) and "value" in intent['slots']['floor']:
+            floor_number = intent['slots']['floor']['value']
+            if (floor_number == '1'):
+                response = get_start_response()
+            elif (floor_number == '2'):
+                response = get_doubleaudio_response(
+                    get_starting_floor2_attributes(),
+                    "Warp to floor 2.",
+                    "You warp to a dimly lit corridor at the base of a ladder, ",
+                    jam_sound(),
+                    "there is something red and sticky on the floor. You can hear the clattering of metal. ",
+                    armour_sound(),
+                    "something is moving down here. "
+                    "You can either go forward down one corridor or move right down another. What would you like to do?",
+                    "Go straight ahead or right?"
+                )
+            elif (floor_number == '3'):
+                response = get_audio_response(
+                    get_starting_floor3_attributes(),
+                    "What do you choose?",
+                    "You warp to floor 3 and end up in a single room. "
+                    "You hear a noise. ",
+                    hatch_sound(),
+                    "The hole you just climbed down has been sealed from the other side. "
+                    "Ahead of you are two treats on small wooden tables, one has a plate of sugared doughnuts, "
+                    "the other has a full victoria sponge cake. Which do you choose?",
+                    "Which do you choose? The cake or the doughnuts?"
+                )
+            elif session.get('attributes', {}) and "Floor" in session.get('attributes', {}):
+                isError = True
+                response = 'That floor does not exist, you can only warp to floors one, two and three. '
+            else:
+                response = get_start_response()
+        elif session.get('attributes', {}) and "Floor" in session.get('attributes', {}):
+            isError = True
+            response = 'You cannot warp to that floor. '
+    else:
+        if session.get('attributes', {}) and "Floor" in session.get('attributes', {}):
+            isError = True
+            response = 'You have not unlocked warping yet. '
+        else:
+            response = get_start_response()
+
+    return [isError, response]
+
+
+def on_intent_floor1(intent_name, session, userId, warp_text):
     # Get Values and Check validity
     x = get_x(session)
     if x == -1:
@@ -1010,18 +1023,18 @@ def on_intent_floor1(intent_name, session, userId):
 
     # Intent Processing
 
-    if intent_name == "AMAZON.HelpIntent" or intent_name == "AMAZON.RepeatIntent" or intent_name == "PlayIntent":
+    if intent_name == "AMAZON.HelpIntent" or intent_name == "AMAZON.RepeatIntent" or intent_name == "PlayIntent" or intent_name == "WarpIntent":
         return  get_floor1_situation(x, visited_larry, visited_barry,
                                      construct_floor1_attributes(x, visited_barry, visited_larry, spoken_to_barry,
-                                                                    spoken_to_larry, asking_larry),
-                                     False, intent_name == "AMAZON.HelpIntent"
+                                                                    spoken_to_larry, asking_larry), False,
+                                     warp_text, intent_name == "AMAZON.HelpIntent"
                                      )
     elif intent_name == "LeftIntent":
         # Move to left room when in entrance hall
         if x == 1:
             return get_floor1_situation(0, visited_larry, visited_barry,
                                         construct_floor1_attributes(0, True, visited_larry, spoken_to_barry,
-                                                                    spoken_to_larry, asking_larry), True
+                                                                    spoken_to_larry, asking_larry), True, ""
                                         )
         elif x == 0:
             return get_response(
@@ -1044,7 +1057,7 @@ def on_intent_floor1(intent_name, session, userId):
         if x == 1:
             return get_floor1_situation(2, visited_larry, visited_barry,
                                         construct_floor1_attributes(2, visited_barry, True, spoken_to_barry,
-                                                                    spoken_to_larry, asking_larry), True
+                                                                    spoken_to_larry, asking_larry), True, ""
                                         )
         elif x == 0:
             return get_response(
@@ -1067,7 +1080,7 @@ def on_intent_floor1(intent_name, session, userId):
         if x == 0 or x == 2:
             return get_floor1_situation(1, visited_larry, visited_barry,
                                         construct_floor1_attributes(1, visited_barry, visited_larry, spoken_to_barry,
-                                                                    spoken_to_larry, asking_larry), True
+                                                                    spoken_to_larry, asking_larry), True, ""
                                         )
         else:
             return get_response(
@@ -1167,7 +1180,7 @@ def on_intent_floor1(intent_name, session, userId):
                                     spoken_to_larry, asking_larry))
 
 
-def on_intent_floor2(intent_name, session, userId):
+def on_intent_floor2(intent_name, session, userId, warp_text):
     # Get values and validate
     x = get_x(session)
     if x == -1:
@@ -1193,12 +1206,12 @@ def on_intent_floor2(intent_name, session, userId):
     player_moved = False
 
     # Handle Intent
-    if intent_name == "AMAZON.RepeatIntent" or intent_name == "PlayIntent":
+    if intent_name == "AMAZON.RepeatIntent" or intent_name == "PlayIntent" or intent_name == "WarpIntent":
         movement_options = get_floor2_movement_options_state(osstate, x, y)
         return get_response(
             construct_floor2_attributes(x, y, osstate, mob_x, mob_y),
             "How do you want to move?",
-            movement_options[0],
+            warp_text + movement_options[0],
             movement_options[1]
         )
     elif intent_name == "AMAZON.HelpIntent":
@@ -1284,12 +1297,13 @@ def on_intent_floor2(intent_name, session, userId):
         construct_floor2_attributes(x, y, osstate, mob_x, mob_y))
 
 
-def on_intent_floor3(intent_name, session, userId):
+def on_intent_floor3(intent_name, session, userId, warp_text):
     # No attributes just intent checks
-    if intent_name == "AMAZON.RepeatIntent" or intent_name == "PlayIntent":
+    if intent_name == "AMAZON.RepeatIntent" or intent_name == "PlayIntent" or intent_name == "WarpIntent":
         return get_response(
             get_starting_floor3_attributes(),
             "What do you choose?",
+            warp_text +
             "Ahead of you are two treats on small wooden tables, one has a plate of sugared doughnuts, "
             "the other has a full victoria sponge cake. Which do you choose?",
             "Which do you choose? The cake or the doughnuts?"
