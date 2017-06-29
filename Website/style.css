@@ -1,6 +1,6 @@
 .description{
 	text-align:center;
-	margin-top:6vh;
+	margin-top:5vh;
 	clear: both;
 	color:#f1ceff;
 	font-size:150%;
@@ -22,4 +22,10 @@
 }
 .guide-link:hover{
 	color:#9406db;
+}
+.puzzleprison-link{
+	color:#f1ceff;
+}
+.puzzleprison-link:hover{
+	color:#a5704c;
 }

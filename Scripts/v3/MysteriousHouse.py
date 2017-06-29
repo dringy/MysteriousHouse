@@ -173,8 +173,9 @@ def SaveFloorNumber(userID, floorNumber):
             Key={
                 'UserID': userID
             },
-            UpdateExpression="set FloorNumber=:f, LastUpdate=:u",
+            UpdateExpression="set CanWarp=:c, FloorNumber=:f, LastUpdate=:u",
             ExpressionAttributeValues={
+                ':c': LoadCanWarp(userID),
                 ':f': floorNumber,
                 ':u': time.strftime("%Y-%m-%d")
             },
@@ -191,9 +192,10 @@ def SaveCanWarp(userID, canWarp):
             Key={
                 'UserID': userID
             },
-            UpdateExpression="set CanWarp=:c, LastUpdate=:u",
+            UpdateExpression="set CanWarp=:c, FloorNumber=:f, LastUpdate=:u",
             ExpressionAttributeValues={
                 ':c': canWarp,
+                ':f': LoadFloorNumber(userID),
                 ':u': time.strftime("%Y-%m-%d")
             },
             ReturnValues = "UPDATED_NEW"
@@ -390,7 +392,7 @@ def initial_load_response(userID):
     elif (floor_number == 3):
         return get_audio_response(
             get_starting_floor3_attributes(),
-            "What do you choose?",
+            "Game Save Loaded - Floor 3.",
             "Game Save Loaded, say restart to restart from the beginning. "
             "You are on floor 3, in a single room. "
             "You hear a noise. ",
@@ -721,7 +723,7 @@ def get_floor2_movement_options_state(osstate, x, y):
                        " forward, right, or go back the way you came?", "Go forward, right, or back?"]
             else:
                 return ["You have reached a set or crates, would you like to go past or go back the way you came?",
-                        "would you like to keep goingor go back?"]
+                        "would you like to keep going or go back?"]
         elif left:
             if right:
                 return ["You have reached a junction, would you like to go straight on, left or right?",
@@ -1355,7 +1357,7 @@ def on_intent_floor3(intent_name, session, userId, warp_text):
         return get_audio_response(
             {},
             "You ate both the doughnuts and the cake.",
-            "You eat a doughnut. You get a sudden pain in the stomach. You quickly take a bite of cake.  "
+            "You eat a doughnut. You get a sudden pain in the stomach. You quickly take a bite of cake. "
             "The pain stopped as suddenly as it started. "
             "You look back to find a familiar face. It's Barry. He laughs and says, fool, they were poisoned and now "
             "you'll be my prisoner. Both you and Barry wait for an awkward ammount of time. I don't understand, exclaimed "

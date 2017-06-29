@@ -27,7 +27,7 @@ BackwardIntent head back
 BackwardIntent go back the way i came
 BackwardIntent go back the way we came
 BackwardIntent head back the way i came
-BackwardIntent go back the way i came
+BackwardIntent head back the way we came
 BackwardIntent turn around
 BackwardIntent turn around and go back
 BackwardIntent turn around and go back the way i came
