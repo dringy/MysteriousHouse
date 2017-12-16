@@ -1,0 +1,31 @@
+.description{
+	text-align:center;
+	margin-top:5.5vh;
+	clear: both;
+	color:#f1ceff;
+	font-size:170%;
+}
+.amzn-link{
+	color:#f1ceff;
+}
+.amzn-link:hover{
+	color:#ff9900;
+}
+.mail-link{
+	color:#f1ceff;
+}
+.mail-link:hover{
+	color:#0072c6;
+}
+.guide-link{
+	color:#f1ceff;
+}
+.guide-link:hover{
+	color:#9406db;
+}
+.puzzleprison-link{
+	color:#f1ceff;
+}
+.puzzleprison-link:hover{
+	color:#a5704c;
+}

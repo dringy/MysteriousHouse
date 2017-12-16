@@ -1,0 +1,167 @@
+AMAZON.StartOverIntent replay
+PlayIntent play
+PlayIntent start
+PlayIntent begin
+PlayIntent start playing
+PlayIntent start game
+PlayIntent begin playing
+PlayIntent begin game
+PlayIntent lets play
+PlayIntent i would like to play
+PlayIntent i would like to begin
+ForwardIntent forward
+ForwardIntent go forward
+ForwardIntent head forward
+ForwardIntent go straight
+ForwardIntent head straight
+ForwardIntent go straight ahead
+ForwardIntent straight ahead
+ForwardIntent keep going forward
+ForwardIntent continue forward
+ForwardIntent continue ahead
+ForwardIntent continue straight
+BackwardIntent back
+BackwardIntent backward
+BackwardIntent go back
+BackwardIntent head back
+BackwardIntent go back the way i came
+BackwardIntent go back the way we came
+BackwardIntent head back the way i came
+BackwardIntent head back the way we came
+BackwardIntent turn around
+BackwardIntent turn around and go back
+BackwardIntent turn around and go back the way i came
+BackwardIntent turn around and go back the way we came
+BackwardIntent turn around and head back
+BackwardIntent turn around and head back the way i came
+BackwardIntent turn around and head back the way we came
+BackwardIntent return
+BackwardIntent return the way i came
+BackwardIntent return the way we came
+BackwardIntent backtrack
+BackwardIntent backtrack the way i came
+BackwardIntent backtrack the way we came
+FirstFloorBackwardIntent head out
+FirstFloorBackwardIntent leave
+RightIntent right
+RightIntent right door
+RightIntent open right door
+RightIntent go through left door
+RightIntent rightward
+RightIntent go right
+RightIntent head right
+RightIntent turn right
+RightIntent keep going right
+RightIntent continue right
+LeftIntent left
+LeftIntent left door
+LeftIntent open left door
+LeftIntent go through left door
+LeftIntent leftward
+LeftIntent go left
+LeftIntent head left
+LeftIntent turn left
+LeftIntent keep going left
+LeftIntent continue left
+ContinueIntent carry on
+ContinueIntent keep going
+ContinueIntent continue
+ContinueIntent follow on
+ContinueIntent follow
+ContinueLeftIntent follow left
+ContinueLeftIntent follow it left
+ContinueLeftIntent follow it round left
+ContinueLeftIntent head round left
+ContinueRightIntent follow right
+ContinueRightIntent follow it right
+ContinueRightIntent follow it round right
+ContinueRightIntent head round right
+TalkIntent talk
+TalkIntent chat
+TalkIntent speak
+TalkIntent approach
+TalkIntent ask
+TalkToLarryIntent talk to larry
+TalkToLarryIntent chat with larry
+TalkToLarryIntent speak to larry
+TalkToLarryIntent talk to larry again
+TalkToLarryIntent chat with larry again
+TalkToLarryIntent speak to larry again
+TalkToLarryIntent approach larry
+TalkToBarryIntent talk to barry
+TalkToBarryIntent chat with barry
+TalkToBarryIntent speak to barry
+TalkToBarryIntent talk to barry again
+TalkToBarryIntent chat with barry again
+TalkToBarryIntent speak to barry again
+TalkToBarryIntent approach barry
+BarrySaidYesIntent yes
+BarrySaidYesIntent he did
+BarrySaidYesIntent yes he did
+BarrySaidYesIntent he said yes
+BarrySaidYesIntent barry said yes
+BarrySaidYesIntent he said it was fine
+BarrySaidNoIntent no
+BarrySaidNoIntent he said no
+BarrySaidNoIntent barry said no
+CakeIntent cake
+CakeIntent the cake
+CakeIntent sponge cake
+CakeIntent the sponge cake
+CakeIntent victoria sponge cake
+CakeIntent the victoria sponge cake
+CakeIntent sponge
+CakeIntent the sponge
+CakeIntent victoria sponge
+CakeIntent the victoria sponge
+CakeIntent can i have the cake
+CakeIntent can i have the sponge cake
+CakeIntent can i have the victoria sponge cake
+CakeIntent i will take the cake
+CakeIntent i will take the sponge cake
+CakeIntent i will take the victoria sponge cake
+CakeIntent i'll take the cake
+CakeIntent i'll take the sponge cake
+CakeIntent i'll take the victoria sponge cake
+CakeIntent i will have the cake
+CakeIntent i will have the sponge cake
+CakeIntent i will have the victoria sponge cake
+CakeIntent i'll have the cake
+CakeIntent i'll have the sponge cake
+CakeIntent i'll have the victoria sponge cake
+DoughnutIntent doughnuts
+DoughnutIntent the doughnuts
+DoughnutIntent can i have doughnuts
+DoughnutIntent can i have the doughnuts
+DoughnutIntent i will take the doughnuts
+DoughnutIntent i'll take the doughnuts
+DoughnutIntent i will have the doughnuts
+DoughnutIntent i'll have the doughnuts
+DoughnutIntent donuts
+DoughnutIntent the donuts
+DoughnutIntent can i have donuts
+DoughnutIntent can i have the donuts
+DoughnutIntent i will take the donuts
+DoughnutIntent i'll take the donuts
+DoughnutIntent i will have the donuts
+DoughnutIntent i'll have the donuts
+BothTreatsIntent both
+BothTreatsIntent both of them
+BothTreatsIntent both the cake and the donuts
+BothTreatsIntent both the cake and the doughnuts
+BothTreatsIntent both the donuts and the cake
+BothTreatsIntent both the doughnuts and the cake
+BothTreatsIntent eat both
+BothTreatsIntent eat both of them
+BothTreatsIntent eat both the cake and the donuts
+BothTreatsIntent eat both the cake and the doughnuts
+BothTreatsIntent eat both the donuts and the cake
+BothTreatsIntent eat both the doughnuts and the cake
+BothTreatsIntent two together
+BothTreatsIntent together
+BothTreatsIntent the pair
+WarpIntent go to {floor}
+WarpIntent go to floor {floor}
+WarpIntent warp {floor}
+WarpIntent warp to {floor}
+WarpIntent warp to floor {floor}

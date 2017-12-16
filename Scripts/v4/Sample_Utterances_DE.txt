@@ -1,0 +1,163 @@
+AMAZON.StartOverIntent Wiederholung
+PlayIntent Spielen
+PlayIntent Start
+PlayIntent Anfangen
+PlayIntent Spiel beginnen
+PlayIntent Spiel starten
+PlayIntent Mit dem Spiel beginnen
+PlayIntent Das Spiel beginnen
+PlayIntent Spielen wir
+PlayIntent Ich möchte spielen
+PlayIntent Ich möchte beginnen
+ForwardIntent vorwärts
+ForwardIntent vorwärts gehen
+ForwardIntent nach vorn
+ForwardIntent geradeaus
+ForwardIntent immer gerade
+ForwardIntent geradeaus gehen
+ForwardIntent direkt nach vorne
+ForwardIntent immer nach vorne
+ForwardIntent weiter vorwärts
+ForwardIntent weiter nach vorne
+ForwardIntent weiter gerade
+BackwardIntent zurück
+BackwardIntent zurück gehen
+BackwardIntent wieder zurück gehen
+BackwardIntent umdrehen und zurück
+BackwardIntent wieder dorthin wo ich hergekommen bin
+BackwardIntent wieder dorthin wo wir hergekommen sind
+BackwardIntent zurück zum Anfang
+BackwardIntent zurück zum Ausgangspunkt
+BackwardIntent umdrehen
+BackwardIntent umdrehen und zurück
+BackwardIntent umdrehen und wieder dahin wo ich hergekommen bin
+BackwardIntent umdrehen und wieder dahin wo wir hergekommen sind
+BackwardIntent umdrehen und wieder zurück
+BackwardIntent umdrehen und wieder zurück dahin wo ich hergekommen bin
+BackwardIntent umdrehen und wieder zurück dahin wo wir hergekommen sind
+BackwardIntent zurück
+BackwardIntent dahin zurück wo ich hergekommen bin
+BackwardIntent dahin zurück wo wir hergekommen sind
+BackwardIntent den Weg zurück
+BackwardIntent wieder zum Anfang
+BackwardIntent wieder zum Anfang wo wir hergekommen sind
+FirstFloorBackwardIntent raus
+FirstFloorBackwardIntent raus hier
+RightIntent rechts
+RightIntent rechte Tür
+RightIntent rechte Tür öffnen
+RightIntent durch die linke Tür
+RightIntent nach rechts
+RightIntent nach rechts gehen
+RightIntent immer nach rechts
+RightIntent nach rechts wenden
+RightIntent immer weiter nach rechts
+RightIntent weiter nach rechts gehen
+LeftIntent links
+LeftIntent linke Tür
+LeftIntent linke Tür öffnen
+LeftIntent durch die linke Tür
+LeftIntent nach links
+LeftIntent nach links gehen
+LeftIntent immer nach links
+LeftIntent nach links wenden
+LeftIntent immer weiter nach links
+LeftIntent weiter nach links
+ContinueIntent immer weiter
+ContinueIntent weiter
+ContinueIntent weiter gehen
+ContinueIntent immer weiter gehen
+ContinueIntent folgen
+ContinueLeftIntent nach links folgen
+ContinueLeftIntent weiter folgen nach links
+ContinueLeftIntent weiter folgen links herum
+ContinueLeftIntent links herum
+ContinueRightIntent nach rechts folgen
+ContinueRightIntent weiter folgen nach rechts
+ContinueRightIntent weiter folgen rechts herum
+ContinueRightIntent rechts herum
+TalkIntent sprechen
+TalkIntent Gespräch
+TalkIntent reden
+TalkIntent ansprechen
+TalkIntent fragen
+TalkToLarryIntent mit Larry sprechen
+TalkToLarryIntent Larry ansprechen
+TalkToLarryIntent nochmal mit Larry sprechen
+TalkToLarryIntent nochmal mit Larry sprechen
+TalkToLarryIntent Larry ansprechen
+TalkToBarryIntent mit Barry sprechen
+TalkToBarryIntent Barry ansprechen
+TalkToBarryIntent nochmal mit Barry sprechen
+TalkToBarryIntent nochmal mit Barry sprechen
+TalkToBarryIntent Barry ansprechen
+BarrySaidYesIntent ja
+BarrySaidYesIntent er tat das
+BarrySaidYesIntent ja das tat er
+BarrySaidYesIntent er sagte ja
+BarrySaidYesIntent Barry sagte nein
+BarrySaidYesIntent er sagte OK
+BarrySaidNoIntent nein
+BarrySaidNoIntent er sagte nein
+BarrySaidNoIntent Barry sagte nein
+CakeIntent Kuchen
+CakeIntent den Kuchen
+CakeIntent Biskuitkuchen
+CakeIntent den Biskuitkuchen
+CakeIntent Victoria-Biskuitkuchen
+CakeIntent den Victoria-Biskuitkuchen
+CakeIntent Biskuitteig
+CakeIntent den Biskuitteig
+CakeIntent Victoria-Biskuitkuchen
+CakeIntent den Victoria-Biskuitkuchen
+CakeIntent kann ich den Kuchen haben
+CakeIntent Kann ich den Biskuitkuchen haben
+CakeIntent Kann ich den Victoria-Biskuitkuchen haben
+CakeIntent Ich nehme den Kuchen
+CakeIntent Ich nehme den Biskuitkuchen
+CakeIntent Ich nehme den Victoria-Biskuitkuchen
+CakeIntent Ich werde den Kuchen nehmen
+CakeIntent Ich werde den Biskuitkuchen nehmen
+CakeIntent Ich werde den Victoria-Biskuitkuchen nehmen
+CakeIntent Für mich den Kuchen
+CakeIntent Für mich den Biskuitkuchen
+CakeIntent Für mich den Victoria-Biskuitkuchen
+CakeIntent Für mich den Kuchen bitte
+CakeIntent Für mich den Biskuitkuchen bitte
+CakeIntent Für mich den Victoria-Biskuitkuchen bitte
+DoughnutIntent Donuts
+DoughnutIntent die Donuts
+DoughnutIntent kann ich die Donuts haben
+DoughnutIntent Kann ich die Donuts haben
+DoughnutIntent Ich nehme die Donuts
+DoughnutIntent Ich werde die Donuts nehmen
+DoughnutIntent Für mich die Donuts
+DoughnutIntent Für mich die Donuts bitte
+DoughnutIntent Donuts
+DoughnutIntent die Donuts
+DoughnutIntent kann ich Donuts haben
+DoughnutIntent Kann ich die Donuts haben
+DoughnutIntent Ich nehme die Donuts
+DoughnutIntent Ich werde die Donuts nehmen
+DoughnutIntent Für mich die Donuts
+DoughnutIntent Für mich die Donuts bitte
+BothTreatsIntent beides
+BothTreatsIntent beide Speisen
+BothTreatsIntent den Kuchen und die Donuts
+BothTreatsIntent den Kuchen und die Donuts bitte
+BothTreatsIntent die Donuts und den Kuchen
+BothTreatsIntent die Donuts und den Kuchen bitte
+BothTreatsIntent beide essen
+BothTreatsIntent beide Speisen essen
+BothTreatsIntent den Kuchen und die Donuts essen
+BothTreatsIntent den Kuchen und die Donuts essen bitte
+BothTreatsIntent die Donuts und den Kuchen essen
+BothTreatsIntent die Donuts und den Kuchen essen bitte
+BothTreatsIntent beides auf einmal
+BothTreatsIntent auf einmal
+BothTreatsIntent beide
+WarpIntent zu {floor}
+WarpIntent zu Etage {floor}
+WarpIntent Sprung {floor}
+WarpIntent Sprung zu {floor}
+WarpIntent Sprung zu Etage {floor}
